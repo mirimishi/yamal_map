@@ -6,7 +6,7 @@ var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}
 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { 
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' });
 
-//var esri_satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+var esri_satellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     //attribution: '©Esri'});
 
 //var yandex_maps = L.tileLayer('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}&scale=1&lang=ru_RU', {
@@ -229,7 +229,7 @@ getData().then(([municipalities,cultural_heritage, field_area, protected_areas,o
         var basemaps = {
             "Серая подложка": positron,
             "OSM": osm,
-           // "ESRI": esri_satellite,
+           "ESRI": esri_satellite,
            // "YandexMaps": yandex_maps,
            // "YandexSatellite": yandex_satellite
         };
